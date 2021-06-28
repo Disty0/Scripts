@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for n in *.en.srt
+do
+  mv "$n" "${n: :-6}srt"
+done
