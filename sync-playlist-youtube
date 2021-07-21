@@ -5,9 +5,8 @@ PWD=$(pwd)
 cd /home/disty/Videos/playlist-youtube
 youtube-dl https://www.youtube.com/playlist?list=PLYf_h2Ntq4hhiDLgnQ1piZAqQizE86nEb --download-archive IDs --write-sub --embed-thumbnail --embed-subs --add-metadata --merge-output-format mp4 --all-subs
 
-cd mp3
-youtube-dl https://www.youtube.com/playlist?list=PLYf_h2Ntq4hhiDLgnQ1piZAqQizE86nEb --download-archive IDs -x --audio-quality 0 --embed-thumbnail --audio-format mp3 --write-sub  --convert-subs srt --sub-lang en --add-metadata
+cd Musics
+youtube-dl https://www.youtube.com/playlist?list=PLYf_h2Ntq4hhiDLgnQ1piZAqQizE86nEb --download-archive IDs -f bestaudio -x --audio-quality 0 --write-sub --convert-subs srt --sub-lang "tr,en" --add-metadata
 cleansrt
-renamealbums
 
 cd $PWD
