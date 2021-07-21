@@ -17,7 +17,7 @@ COMMENT=Converted from Wav to FLAC using ffmpeg
 ALBUM=
 TRACKNUMBER=${file: 0: 2}" > "${file/.wav}.meta"
 
-metaflac --import-picture-from="JKT.png" --import-tags-from="${file/.wav}.meta" "${file/.wav}.flac"
+metaflac --import-picture-from="cover.png" --import-tags-from="${file/.wav}.meta" "${file/.wav}.flac"
 
 rm "${file/.wav}.meta"
 
