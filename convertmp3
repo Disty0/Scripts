@@ -1,5 +1,0 @@
-#!/bin/bash
-mkdir mp3
-for i in *.mp4; do ffmpeg -n -i "$i" -q:a 0 -map a "mp3/${i%.*}.mp3"; done
-for i in *.mkv; do ffmpeg -n -i "$i" -q:a 0 -map a "mp3/${i%.*}.mp3"; done
-for i in *.webm; do ffmpeg -n -i "$i" -q:a 0 -map a "mp3/${i%.*}.mp3"; done
