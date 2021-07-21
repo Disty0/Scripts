@@ -23,3 +23,17 @@ do if [[ "$n" =~ -[-_0-9a-zA-Z]{11}.mp3$ ]]
    then echo "youtube ${n: -15: 11}" >> IDs
    fi
 done
+
+for n in *.opus
+do if [[ "$n" =~ -[-_0-9a-zA-Z]{11}.opus$ ]]
+   then echo "youtube ${n: -16: 11}" >> IDs
+   fi
+done
+
+for n in *.m4a
+do if [[ "$n" =~ -[-_0-9a-zA-Z]{11}.m4a$ ]]
+   then echo "youtube ${n: -15: 11}" >> IDs
+   fi
+done
+
+

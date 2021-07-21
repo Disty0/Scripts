@@ -4,3 +4,8 @@ for n in *.en.srt
 do
   mv "$n" "${n: :-6}srt"
 done
+
+for n in *.tr.srt
+do
+  mv "$n" "${n: :-6}srt"
+done
