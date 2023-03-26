@@ -24,7 +24,7 @@ do
 	echo "Throttling Reason PL2: $(cat $DRM/gt/gt0/throttle_reason_pl2)"
 	echo "Throttling Reason PL4: $(cat $DRM/gt/gt0/throttle_reason_pl4)"
 	echo "Throttling Reason Prochot: $(cat $DRM/gt/gt0/throttle_reason_prochot)"
-	echo "Throttling Reasoni Ratl: $(cat $DRM/gt/gt0/throttle_reason_ratl)"
+	echo "Throttling Reason Ratl: $(cat $DRM/gt/gt0/throttle_reason_ratl)"
 	echo "Throttling Reason VR_TDC: $(cat $DRM/gt/gt0/throttle_reason_vr_tdc)"
 	echo "Throttling Reason VR_THERMALERT: $(cat $DRM/gt/gt0/throttle_reason_vr_thermalert)"
 	echo " "
