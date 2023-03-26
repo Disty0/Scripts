@@ -1,0 +1,40 @@
+#!/bin/bash
+
+mkdir enhance
+
+for i in *.png
+do
+	waifu2x-ncnn-vulkan -i $i -o "${i/.png}-2x-n3.png" -s 2 -n 3	
+	waifu2x-ncnn-vulkan -i "${i/.png}-2x-n3.png" -o "${i/.png}-2x2-3n2.png" -s 2 -n 2
+	rm "${i/.png}-2x-n3.png"
+	oxipng "${i/.png}-2x2-3n2.png"
+	mv "${i/.png}-2x2-3n2.png" enhance/ 
+done
+
+for i in *.jpg
+do
+	waifu2x-ncnn-vulkan -i $i -o "${i/.jpg}-2x-n3.png" -s 2 -n 3	
+	waifu2x-ncnn-vulkan -i "${i/.jpg}-2x-n3.png" -o "${i/.jpg}-2x2-3n2.png" -s 2 -n 2
+	rm "${i/.jpg}-2x-n3.png"
+	oxipng "${i/.jpg}-2x2-3n2.png"	
+	mv "${i/.jpg}-2x2-3n2.png" enhance/ 
+done
+
+for i in *.jpeg
+do
+	waifu2x-ncnn-vulkan -i $i -o "${i/.jpeg}-2x-n3.png" -s 2 -n 3	
+	waifu2x-ncnn-vulkan -i "${i/.jpeg}-2x-n3.png" -o "${i/.jpeg}-2x2-3n2.png" -s 2 -n 2
+	rm "${i/.jpeg}-2x-n3.png"
+	oxipng "${i/.jpeg}-2x2-3n2.png"	
+	mv "${i/.jpeg}-2x2-3n2.png" enhance/ 
+done
+
+for i in *.webp
+do
+	waifu2x-ncnn-vulkan -i $i -o "${i/.webp}-2x-n3.png" -s 2 -n 3	
+	waifu2x-ncnn-vulkan -i "${i/.webp}-2x-n3.png" -o "${i/.webp}-2x2-3n2.png" -s 2 -n 2
+	rm "${i/.webp}-2x-n3.png"
+	oxipng "${i/.webp}-2x2-3n2.png"	
+	mv "${i/.webp}-2x2-3n2.png" enhance/ 
+done
+

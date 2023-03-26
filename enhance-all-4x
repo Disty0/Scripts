@@ -1,0 +1,32 @@
+#!/bin/bash
+
+mkdir enhance
+
+for i in *.png
+do
+	waifu2x-ncnn-vulkan -i $i -o "${i/.png}-4x.png" -s 4 -n 2	
+	oxipng "${i/.png}-4x.png"	
+	mv "${i/.png}-4x.png" enhance/ 
+done
+
+for i in *.jpg
+do
+	waifu2x-ncnn-vulkan -i $i -o "${i/.jpg}-4x.png" -s 4 -n 2	
+	oxipng "${i/.jpg}-4x.png"	
+	mv "${i/.jpg}-4x.png" enhance/ 
+done
+
+for i in *.jpeg
+do
+	waifu2x-ncnn-vulkan -i $i -o "${i/.jpeg}-4x.png" -s 4 -n 2	
+	oxipng "${i/.jpeg}-4x.png"	
+	mv "${i/.jpeg}-4x.png" enhance/ 
+done
+
+for i in *.webp
+do
+	waifu2x-ncnn-vulkan -i $i -o "${i/.webp}-4x.png" -s 4 -n 2	
+	oxipng "${i/.webp}-4x.png"	
+	mv "${i/.webp}-4x.png" enhance/ 
+done
+

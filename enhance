@@ -1,0 +1,4 @@
+#!/bin/bash
+
+waifu2x-ncnn-vulkan -i $@ -o $@-2x.png -s 2 -n 2
+oxipng $@-2x.png

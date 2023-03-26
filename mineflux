@@ -1,0 +1,22 @@
+#!/bin/bash
+
+sudo systemctl restart fancontrol.service
+
+WALLET=t1MdPA9ez5pFN8Sx5RakxC6i2s3pBwD621W
+WORKER=
+POOL=tr.flux.herominers.com:1200
+COIN=ZEL
+EXTRA=$@
+PWD=$(pwd)
+
+cd /home/disty/Apps/lolMiner
+
+while true
+do
+    ./lolMiner -c $COIN -p $POOL -u $WALLET.$WORKER $EXTRA
+    echo
+    echo "Hit [CTRL+C] to stop the miner from restarting in 10 seconds"
+    sleep 10
+done
+
+cd $PWD
