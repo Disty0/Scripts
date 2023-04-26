@@ -1,0 +1,8 @@
+#!/bin/bash
+
+EXTRA=$@
+PWD=$(pwd)
+
+cd /home/disty/Apps/SillyTavern
+/home/disty/Apps/SillyTavern/start-linux.sh $EXTRA
+cd $PWD

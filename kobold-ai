@@ -1,0 +1,8 @@
+#!/bin/bash
+
+EXTRA=$@
+PWD=$(pwd)
+
+cd /home/disty/Apps/KoboldAI/
+/home/disty/Apps/KoboldAI/play-oneapi.sh $EXTRA --host --model PygmalionAI_pygmalion-6b --no_ui
+cd $PWD

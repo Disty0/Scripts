@@ -1,0 +1,9 @@
+#!/bin/bash
+
+EXTRA=$@
+PWD=$(pwd)
+
+cd /home/disty/Apps/TavernAI-extras
+source /home/disty/Apps/TavernAI-extras/enviroments/tavern-ai-extra/bin/activate
+/home/disty/Apps/TavernAI-extras/start.sh $EXTRA
+cd $PWD

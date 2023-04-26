@@ -5,24 +5,24 @@ mkdir enhance
 for i in *.png
 do
 	enhance $i
-	mv $i-2x.png "enhance/${i/.png}-2x.png"
+	mv $i-4x.jpg "enhance/${i/.jpg}-4x.jpg"
 done
 
 for i in *.jpg
 do
 	enhance $i
-	mv $i-2x.png "enhance/${i/.jpg}-2x.png"
+	mv $i-4x.jpg "enhance/${i/.jpg}-4x.jpg"
 done
 
 for i in *.jpeg
 do
 	enhance $i
-	mv $i-2x.png "enhance/${i/.jpeg}-2x.png"
+	mv $i-4x.jpg "enhance/${i/.jpeg}-4x.jpg"
 done
 
 for i in *.webp
 do
 	enhance $i
-	mv $i-2x.png "enhance/${i/.webp}-2x.png"
+	mv $i-4x.jpg "enhance/${i/.webp}-4x.jpg"
 done
 

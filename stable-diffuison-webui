@@ -1,0 +1,14 @@
+#!/bin/bash
+source /opt/intel/oneapi/setvars.sh
+
+EXTRA=$@
+PWD=$(pwd)
+install_dir="/home/disty/Apps"
+clone_dir="stable-diffusion-webui"
+
+export COMMANDLINE_ARGS="--disable-nan-check --listen --enable-insecure-extension-access --opt-split-attention-v1 --theme dark $EXTRA"
+
+cd /home/disty/Apps/stable-diffusion-webui
+source /home/disty/Apps/stable-diffusion-webui/environment/stable-diffusion-webui/bin/activate
+python launch.py --use-intel-oneapi
+cd $PWD
