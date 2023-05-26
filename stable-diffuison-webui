@@ -1,11 +1,11 @@
 #!/bin/bash
-source /opt/intel/oneapi/setvars.sh
-#source /opt/intel/oneapi/compiler/latest/env/vars.sh
-#source /opt/intel/oneapi/mkl/latest/env/vars.sh
+
+$python_cmd="python3.10"
 
 EXTRA=$@
 PWD=$(pwd)
 
 cd /home/disty/Apps/automatic
+git fetch && git pull
 /home/disty/Apps/automatic/webui.sh --use-ipex --listen $EXTRA
 cd $PWD
