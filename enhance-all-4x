@@ -4,29 +4,25 @@ mkdir enhance
 
 for i in *.png
 do
-	waifu2x-ncnn-vulkan -i $i -o "${i/.png}-4x.jpg" -s 4 -n 2	
-	jpegoptim "${i/.png}-4x.jpg"	
-	mv "${i/.png}-4x.jpg" enhance/ 
+	enhance-4x $i
+	mv $i-4x.jpg "enhance/${i/.jpg}-4x.jpg"
 done
 
 for i in *.jpg
 do
-	waifu2x-ncnn-vulkan -i $i -o "${i/.jpg}-4x.jpg" -s 4 -n 2	
-	jpegoptim "${i/.jpg}-4x.jpg"	
-	mv "${i/.jpg}-4x.jpg" enhance/ 
+	enhance-4x $i
+	mv $i-4x.jpg "enhance/${i/.jpg}-4x.jpg"
 done
 
 for i in *.jpeg
 do
-	waifu2x-ncnn-vulkan -i $i -o "${i/.jpeg}-4x.jpg" -s 4 -n 2	
-	jpegoptim "${i/.jpeg}-4x.jpg"	
-	mv "${i/.jpeg}-4x.jpg" enhance/ 
+	enhance-4x $i
+	mv $i-4x.jpg "enhance/${i/.jpeg}-4x.jpg"
 done
 
 for i in *.webp
 do
-	waifu2x-ncnn-vulkan -i $i -o "${i/.webp}-4x.jpg" -s 4 -n 2	
-	jpegoptim "${i/.webp}-4x.jpg"	
-	mv "${i/.webp}-4x.jpg" enhance/ 
+	enhance-4x $i
+	mv $i-4x.jpg "enhance/${i/.webp}-4x.jpg"
 done
 
