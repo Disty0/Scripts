@@ -1,11 +1,9 @@
 #!/bin/bash
 
-$python_cmd="python3.10"
-
 EXTRA=$@
 PWD=$(pwd)
 
 cd /home/disty/Apps/automatic
-git fetch && git pull
-/home/disty/Apps/automatic/webui.sh --use-ipex --listen $EXTRA
+#git fetch && git pull
+python_cmd="python3.10" /home/disty/Apps/automatic/webui.sh --use-ipex --listen $EXTRA
 cd $PWD
