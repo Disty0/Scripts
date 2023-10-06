@@ -1,0 +1,5 @@
+#!/bin/bash
+gnuplot -p << eor
+set datafile separator ","
+plot "mem_log.txt" using 1:2 with lines
+eor

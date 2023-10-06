@@ -1,0 +1,8 @@
+#!/bin/sh
+step=0
+while :
+do
+mem=$(sudo xpu-smi stats -d 0 | grep "GPU Memory Used" |  grep -o "[0-9]" |  awk '{print}' ORS='')
+step=$(($step + 1))
+echo "$step,$mem" >> mem_log.txt
+done

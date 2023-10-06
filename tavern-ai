@@ -3,6 +3,8 @@
 EXTRA=$@
 PWD=$(pwd)
 
-cd /home/disty/Apps/SillyTavern
-/home/disty/Apps/SillyTavern/start-linux.sh $EXTRA
+cd /home/disty/Apps/AI/SillyTavern
+git pull origin
+git submodule update
+/home/disty/Apps/AI/SillyTavern/start-linux.sh $EXTRA
 cd $PWD

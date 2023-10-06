@@ -1,5 +1,5 @@
 #!/bin/bash
 
-waifu2x-ncnn-vulkan -i $@ -o $@-2x.jpg -s 2 -n 2
+waifu2x-ncnn-vulkan -i $@ -o $@-2x.png -s 2 -n 2
 #realesrgan-ncnn-vulkan -n realesrgan-x4plus-anime -i $@ -o $@-4x.jpg -s 4
-jpegoptim $@-2x.jpg
+oxipng $@-2x.png

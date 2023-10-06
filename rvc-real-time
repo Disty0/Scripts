@@ -1,0 +1,13 @@
+#!/bin/bash
+
+EXTRA=$@
+PWD=$(pwd)
+WORKFOLDER=
+cd /home/disty/Apps/AI/Retrieval-based-Voice-Conversion-WebUI
+git pull origin
+git submodule update
+source .venv/bin/activate
+source /opt/intel/oneapi/setvars.sh
+python gui_v1.py $EXTRA
+deactivate
+cd $PWD

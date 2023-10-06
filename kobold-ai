@@ -3,6 +3,8 @@
 EXTRA=$@
 PWD=$(pwd)
 
-cd /home/disty/Apps/KoboldAI/
-/home/disty/Apps/KoboldAI/play-oneapi.sh $EXTRA --host --model PygmalionAI_pygmalion-6b --no_ui
+cd /home/disty/Apps/AI/KoboldAI/
+git pull origin
+git submodule update
+/home/disty/Apps/AI/KoboldAI/play-ipex.sh $EXTRA --host #--no_ui #--model PygmalionAI_pygmalion-6b
 cd $PWD

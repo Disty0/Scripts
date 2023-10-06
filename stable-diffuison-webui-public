@@ -1,0 +1,9 @@
+#!/bin/bash
+
+EXTRA="--use-ipex --listen --insecure --port 7861 --auth-file /home/disty/Apps/AI/public/automatic/webui-user.bat"
+PWD=$(pwd)
+cd /home/disty/Apps/AI/public/automatic
+git pull origin
+git submodule update
+venv_dir="/home/disty/Apps/AI/automatic/venv" /home/disty/Apps/AI/public/automatic/webui.sh $EXTRA $@
+cd $PWD

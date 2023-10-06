@@ -1,9 +1,9 @@
 #!/bin/bash
 
-EXTRA=$@
+EXTRA="--use-ipex --listen --insecure --auth-file /home/disty/Apps/AI/automatic/webui-user.bat"
 PWD=$(pwd)
-
-cd /home/disty/Apps/automatic
-git fetch && git pull
-python_cmd="python3.10" /home/disty/Apps/automatic/webui.sh --use-ipex --listen $EXTRA
+cd /home/disty/Apps/AI/automatic
+git pull origin
+git submodule update
+/home/disty/Apps/AI/automatic/webui.sh $EXTRA $@
 cd $PWD

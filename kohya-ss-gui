@@ -1,0 +1,10 @@
+#!/bin/bash
+
+EXTRA="--use-ipex --server_port 7865"
+PWD=$(pwd)
+cd /home/disty/Apps/AI/kohya_ss
+git pull origin
+git submodule update
+/home/disty/Apps/AI/kohya_ss/gui.sh $EXTRA $@
+PWD=$(pwd)
+cd $PWD

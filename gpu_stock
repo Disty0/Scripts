@@ -1,0 +1,3 @@
+#!/bin/bash
+echo 28000 > /sys/class/hwmon/hwmon2/power1_max_interval
+echo 190000000 > /sys/class/hwmon/hwmon2/power1_max

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+EXTRA="--use-openvino --listen --insecure --auth-file /home/disty/Apps/AI/automatic/webui-user.bat"
+PWD=$(pwd)
+cd /home/disty/Apps/AI/openvino/automatic
+git pull origin
+git submodule update
+/home/disty/Apps/AI/openvino/automatic/webui.sh $EXTRA $@
+cd $PWD

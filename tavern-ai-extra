@@ -3,7 +3,9 @@
 EXTRA=$@
 PWD=$(pwd)
 
-cd /home/disty/Apps/TavernAI-extras
-source /home/disty/Apps/TavernAI-extras/enviroments/tavern-ai-extra/bin/activate
-/home/disty/Apps/TavernAI-extras/start.sh $EXTRA
+cd /home/disty/Apps/AI/TavernAI-extras
+git pull origin
+git submodule update
+source /home/disty/Apps/AI/TavernAI-extras/enviroments/tavern-ai-extra/bin/activate
+/home/disty/Apps/AI/TavernAI-extras/start.sh $EXTRA
 cd $PWD

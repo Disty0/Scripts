@@ -1,0 +1,31 @@
+#!/bin/bash
+
+sudo systemctl restart fancontrol.service
+
+export GPU_MAX_HEAP_SIZE=100
+export GPU_MAX_USE_SYNC_OBJECTS=1
+export GPU_SINGLE_ALLOC_PERCENT=100
+export GPU_MAX_ALLOC_PERCENT=100
+export GPU_MAX_SINGLE_ALLOC_PERCENT=100
+export GPU_ENABLE_LARGE_ALLOCATION=100
+export GPU_MAX_WORKGROUP_SIZE=1024
+reset
+
+WALLET=XwnLgw8W8BXhTGx1nYbmP94ER9hqFoKso832FhXJLaBFMmUb8MVsNCaVFUo5mvwjZo3QA5AtDaxgofLMic8Yv4mN33kw8air3
+WORKER=A770
+MALLOB=https://dnx.eu.ekapool.com
+POOL=dnx.eu.ekapool.com:19666
+COIN=dynex
+EXTRA=$@
+PWD=$(pwd)
+
+cd /home/disty/Apps/Miner/SRBMiner/
+
+while true
+do
+    /home/disty/Apps/Miner/SRBMiner/SRBMiner-MULTI --disable-cpu --algorithm $COIN --mallob-endpoint $MALLOB --pool $POOL --wallet $WALLET --password $WORKER $EXTRA 
+    echo "Hit [CTRL+C] to stop the miner from restarting in 10 seconds"
+    sleep 10
+done
+
+cd $PWD
