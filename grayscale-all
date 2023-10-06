@@ -1,0 +1,29 @@
+#!/bin/bash
+
+mkdir grayscale
+
+for i in *.png
+do
+	convert -colorspace Gray "$i" "grayscale/${i/.png}-grayscale.png"
+	sed '$s/$/, monochrome/' "${i/.png}.txt" > "grayscale/${i/.png}-grayscale.txt"
+	
+done
+i=png
+for i in *.jpg
+do
+	convert -colorspace Gray "$i" "grayscale/${i/.jpg}-grayscale.jpg"
+	sed '$s/$/, monochrome/' "${i/.jpg}.txt" > "grayscale/${i/.jpg}-grayscale.txt"
+done
+i=jpg
+for i in *.jpeg
+do
+	convert -colorspace Gray "$i" "grayscale/${i/.jpeg}-grayscale.jpeg"
+	sed '$s/$/, monochrome/' "${i/.jpeg}.txt" > "grayscale/${i/.jpeg}-grayscale.txt"
+done
+i=jpeg
+for i in *.webp
+do
+	convert -colorspace Gray "$i" "grayscale/${i/.webp}-grayscale.webp"
+	sed '$s/$/, monochrome/' "${i/.webp}.txt" > "grayscale/${i/.webp}-grayscale.txt"
+done
+

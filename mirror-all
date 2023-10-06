@@ -1,0 +1,28 @@
+#!/bin/bash
+
+mkdir mirror
+
+for i in *.png
+do
+	convert -flop "$i" "mirror/${i/.png}-mirrored.png"
+	cp "${i/.png}.txt" "mirror/${i/.png}-mirrored.txt"
+done
+i=png
+for i in *.jpg
+do
+	convert -flop "$i" "mirror/${i/.jpg}-mirrored.jpg"
+	cp "${i/.jpg}.txt" "mirror/${i/.jpg}-mirrored.txt"
+done
+i=jpg
+for i in *.jpeg
+do
+	convert -flop "$i" "mirror/${i/.jpeg}-mirrored.jpeg"
+	cp "${i/.jpeg}.txt" "mirror/${i/.jpeg}-mirrored.txt"
+done
+i=jpeg
+for i in *.webp
+do
+	convert -flop "$i" "mirror/${i/.webp}-mirrored.webp"
+	cp "${i/.webp}.txt" "mirror/${i/.webp}-mirrored.txt"
+done
+
